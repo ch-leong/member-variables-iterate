@@ -1,0 +1,11 @@
+
+*.json
+*.dll
+*.exe
+*.pdb
+*.props
+*.targets
+*.cs
+*.cache
+*.txt
+*.v2
