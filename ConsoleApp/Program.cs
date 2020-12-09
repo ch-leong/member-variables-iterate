@@ -22,16 +22,16 @@ namespace ConsoleApp
         {
             A a = new A();
             B b = new B();
-            FieldInfo[] pia = typeof(A).GetFields();
-            FieldInfo[] pib = typeof(B).GetFields();
+            FieldInfo[] fia = typeof(A).GetFields();
+            FieldInfo[] fib = typeof(B).GetFields();
 
-            foreach (var p in pia)
+            foreach (var p in fia)
                 Console.WriteLine("{0} = {1}", p.Name, p.GetValue(a));
 
-            for (int i = 0; i < pia.Count(); ++i)
-                pia[i].SetValue(a, pib[i].GetValue(b));
+            for (int i = 0; i < fia.Count(); ++i)
+                fia[i].SetValue(a, fib[i].GetValue(b));
 
-            foreach (var p in pia)
+            foreach (var p in fia)
                 Console.WriteLine("{0} = {1}", p.Name, p.GetValue(a));
         }
     }
